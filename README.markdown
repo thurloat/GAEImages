@@ -6,23 +6,27 @@
 ### Destructions as follows
 
 #### In settings.py
->	enter GAEImages into your installed apps
+        INSTALLED_APPS = (
+            ...
+            'GAEImages',
+            ...
+        )
 
 #### In models.py
 
->from GAEImages.properties import ReferenceListProperty
->class ThingThatNeedsImages(db.model):
->	mahimagez = ReferenceListProperty(FlashImage)
+        from GAEImages.properties import ReferenceListProperty
+        class ThingThatNeedsImages(db.model):
+        	mahimagez = ReferenceListProperty(FlashImage)
 
 
 
 #### In your views.py
 
->from flashdrawing.views import FlashDrawingWidget, FlashDrawingField
->class Woot(Form):
->	mahimagez = FlashDrawingField(widget=FlashDrawingWidget)
->	class Meta:
->		model = models.ThingThatNeedsImages
+        from flashdrawing.views import FlashDrawingWidget, FlashDrawingField
+        class Woot(Form):
+        	mahimagez = FlashDrawingField(widget=FlashDrawingWidget)
+        	class Meta:
+        		model = models.ThingThatNeedsImages
 
 ****
 Now you'll have some images all up in your app. They're stored in each model as the key, 
