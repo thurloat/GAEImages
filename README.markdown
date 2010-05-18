@@ -1,14 +1,14 @@
-# GAEImages #
-## An Image uploading model & widget for Django App Engine ##
-### Squishes your image down to 1MB through a couple ways. Size first, then compression in flash ###
+# GAEImages
+## An Image uploading model & widget for Django App Engine
+### Squishes your image down to 1MB through a couple ways. Size first, then compression in flash
 ****
 
-### Destructions as follows ###
+### Destructions as follows
 
-#### In settings.py: ####
+#### In settings.py
 >	enter GAEImages into your installed apps
 
-#### In models.py: ####
+#### In models.py
 
 >from GAEImages.properties import ReferenceListProperty
 >class ThingThatNeedsImages(db.model):
@@ -16,7 +16,7 @@
 
 
 
-#### In your views.py: #### 
+#### In your views.py
 
 >from flashdrawing.views import FlashDrawingWidget, FlashDrawingField
 >class Woot(Form):
