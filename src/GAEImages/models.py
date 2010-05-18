@@ -1,8 +1,6 @@
-
-from norex.db import Model
 from google.appengine.ext import db
 
-class FlashImage(Model):
+class FlashImage(db.Model):
     url = '/fupload/'
     uploaded_data = db.BlobProperty()
     date = db.DateTimeProperty(auto_now_add=True)

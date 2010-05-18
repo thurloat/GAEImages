@@ -1,5 +1,4 @@
-import models
-from flashdrawing.models import FlashImage
+from GAEImages.models import FlashImage
 from django.http import HttpResponse, Http404
 from google.appengine.ext import db
 from django import forms
@@ -39,8 +38,6 @@ class FlashDrawingField(forms.CharField):
     if (value): keys = value.strip().split("\n")
     else: keys = []
     return [db.get(key.strip()) for key in keys]
-
-
 
 class FlashUploadWidget(forms.Textarea):
     def render(self,name,value,*args,**kwargs):
